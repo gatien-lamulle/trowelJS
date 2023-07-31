@@ -1,10 +1,10 @@
-# TrowelJS - An Easy-to-Use Node Module for Creating Multiples Components with Bricks
+# TrowelJS - An Easy-to-Use Node Module for Creating Multiples Components
 
 
 <img width="150" src="./static/resources/trowel.png">
 
 
-TrowelJS is a Node.js module designed to simplify the process of generating various pre-builds-components directly within your code using bricks. 
+TrowelJS is a Node.js module designed to simplify the process of generating various pre-builds-components directly within your code. These components are called `Bricks`.
 
 At the moment, it supports only form creation. The module provides a straightforward and intuitive API to create and customize forms effortlessly.
 
@@ -13,7 +13,7 @@ At the moment, it supports only form creation. The module provides a straightfor
 </sub>
 
 ### 🚧 Work In Progress 🚧
-More components coming soon...
+More bricks coming soon...
 
 ## Example Usage
 
@@ -227,6 +227,24 @@ Here is the list of possible values:
 | select           | Dropdown select input              |
 ```
 
+### Styling bricks
+
+To add styles and enhance the appearance of your bricks, you can import the TrowelJS CSS file into your website's CSS file. Here's how you can do it for the form:
+
+1. Assuming you have installed TrowelJS using npm, ensure that the TrowelJS package is available in your project's `node_modules` folder.
+
+2. Create or open your website's main CSS file.
+
+3. Import the TrowelJS styles by adding the following line to your CSS file:
+
+#### Forms
+   ```css
+   @import url('../node_modules/troweljs/static/styles/form.css');
+   ```
+
+By importing the TrowelJS CSS, you can easily apply predefined styles to your bricks. 
+
+However, TrowelJS allows further customization to tailor the forms to your specific needs. Feel free to explore other CSS rules and classes provided by TrowelJS to customize various form elements further.
 
 ## Contributing
 
