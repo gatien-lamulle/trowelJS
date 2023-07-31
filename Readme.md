@@ -99,23 +99,23 @@ You can use these tables as a reference to understand the parameters and their t
 | Parameter | Type            | Description                                                                                                                     |
 |-----------|-----------------|---------------------------------------------------------------------------------------------------------------------------------|
 | container | string \| HTMLElement | The container element or selector where the form will be rendered. It can be either an HTML element or a valid CSS selector. |
-| options   | [FormOptions](#FormOptions-Properties)     | An object containing the configuration options for creating the form.                                                            |
+| options   | [FormOptions](#formoptions-properties)     | An object containing the configuration options for creating the form.                                                            |
 
 
 ### FormOptions Properties
 
 | Property        | Type                    | Explanation                                                                                                                     |
 |-----------------|-------------------------|---------------------------------------------------------------------------------------------------------------------------------|
-| fields          | ([Field](#Field-Properties) \| FieldContainer)[] | An array of fields or field containers that define the structure of the form. Field containers allow grouping multiple fields. |
+| fields          | ([Field](#field-properties) \| FieldContainer)[] | An array of fields or field containers that define the structure of the form. Field containers allow grouping multiple fields. |
 | globalLabels    | LabelType \| undefined  | (Optional) The default label type for all fields. It can be "none", "default", or "placeholder".                              |
-| submit          | [SubmitAction](#Submit-Action-Properties) \| undefined | (Optional) An object representing the submit action properties.                                                               
+| submit          | [SubmitAction](#submit-action-properties) \| undefined | (Optional) An object representing the submit action properties.                                                               
 
 ### Field Properties
 
 | Property        | Type                      | Explanation                                                                                                       |
 |-----------------|---------------------------|-------------------------------------------------------------------------------------------------------------------|
 | name            | string                    | The name of the field, used as the identifier for the field.                                                     |
-| type            | [typeField](#typeField-Possibles-Values)                 | The type of the field (e.g., text, checkbox, select, etc.).                                                       |
+| type            | [typeField](#typefield-possibles-values)                 | The type of the field (e.g., text, checkbox, select, etc.).                                                       |
 | classes         | string[]                  | (Optional) An array of CSS class names to apply custom styles to the field.                                       |
 | id              | string                    | (Optional) The HTML element ID for the field.                                                                     |
 | defaultValue    | string                    | (Optional) The default value to be displayed in the field.                                                        |
@@ -164,15 +164,15 @@ In the above example, we used a `FieldContainer` to group the first name and las
 |-----------------|-------------------------|------------------------------------------------------------------------------------------------------|
 | action          | string \| undefined     | (Optional) The URL or action to be performed when the form is submitted.                             |
 | name            | string                  | The label or text for the submit button.                                                             |
-| handler         | (values: [submitValue](#submitValue-Properties)[]) => void \| undefined | (Optional) A function called when the form is submitted. It receives an array of submit values as input. |
-| checkers        | [CheckerSubmit](#Checker-Properties)[] \| undefined | (Optional) An array of checker objects to validate the form before submission.                      |
+| handler         | (values: [submitValue](#submitvalue-properties)[]) => void \| undefined | (Optional) A function called when the form is submitted. It receives an array of submit values as input. |
+| checkers        | [CheckerSubmit](#checker-properties)[] \| undefined | (Optional) An array of checker objects to validate the form before submission.                      |
 
 ### Checker Properties
 
 | Property        | Type                    | Explanation                                                                                     |
 |-----------------|-------------------------|-------------------------------------------------------------------------------------------------|
 | type            | CheckerType \| undefined | (Optional) The type of the checker, which can be "error", "info", or "warning".                 |
-| condition       | (values: [submitValue](#submitValue-Properties)[]) => boolean | A function that evaluates the condition for the checker. It receives an array of submit values as input and returns a boolean value. |
+| condition       | (values: [submitValue](#submitvalue-properties)[]) => boolean | A function that evaluates the condition for the checker. It receives an array of submit values as input and returns a boolean value. |
 | message         | string \| undefined     | (Optional) The message to be displayed if the condition of the checker is met.                   |
 | messageTimeMs   | number \| undefined     | (Optional) The time in milliseconds for displaying the message.                                 |
 | messageColor    | string \| undefined | (Optional) The color of the message. Represented as a valid CSS color value                                                             |
@@ -184,7 +184,7 @@ In the above example, we used a `FieldContainer` to group the first name and las
 | Property | Type   | Explanation                                                                              |
 |----------|--------|------------------------------------------------------------------------------------------|
 | name     | string | The name of the submit value, which corresponds to the `name` property of the field.    |
-| type     | [typeField](#typeField-Possibles-Values)  | The type of the submit value, which corresponds to the `type` property of the field.    |
+| type     | [typeField](#typefield-possibles-values)  | The type of the submit value, which corresponds to the `type` property of the field.    |
 | value    | string | The value of the submit value, which represents the user-inputted value of the field.   |
 
 The `submitValue` type represents a single form field's value when the form is submitted. It contains the `name`, `type`, and `value` properties, providing information about the field that was submitted and its corresponding value.
