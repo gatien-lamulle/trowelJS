@@ -227,15 +227,15 @@ Here is the list of possible values:
 | select           | Dropdown select input              |
 ```
 
-### Styling bricks
+### Styling Bricks
 
-To add styles and enhance the appearance of your bricks, you can import the TrowelJS CSS file into your website's CSS file. Here's how you can do it for the form:
+To add styles and enhance the appearance of your bricks, you can import the TrowelJS CSS file into your website's CSS file. Here's how you can do it:
 
 1. Assuming you have installed TrowelJS using npm, ensure that the TrowelJS package is available in your project's `node_modules` folder.
 
 2. Create or open your website's main CSS file.
 
-3. Import the TrowelJS styles by adding the following line to your CSS file:
+3. Import the TrowelJS styles by adding the following lines to your CSS file according to the bricks you want to customize:
 
 #### Forms
    ```css
@@ -244,7 +244,7 @@ To add styles and enhance the appearance of your bricks, you can import the Trow
 
 By importing the TrowelJS CSS, you can easily apply predefined styles to your bricks. 
 
-However, TrowelJS allows further customization to tailor the forms to your specific needs. Feel free to explore other CSS rules and classes provided by TrowelJS to customize various form elements further.
+However, TrowelJS allows further customization to tailor the bricks to your specific needs. Feel free to explore other CSS rules and classes provided by TrowelJS to customize various bricks elements further.
 
 ## Contributing
 
