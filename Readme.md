@@ -1,5 +1,6 @@
 # TrowelJS - An Easy-to-Use Node Module for Creating Multiples Components with Bricks
 
+
 <img width="150" src="./static/resources/trowel.png">
 
 
@@ -7,11 +8,12 @@ TrowelJS is a Node.js module designed to simplify the process of generating vari
 
 At the moment, it supports only form creation. The module provides a straightforward and intuitive API to create and customize forms effortlessly.
 
-Work in progress to add more components...
+<sub>
+<a href="https://www.flaticon.com/free-icons/trowel" title="trowel icons"><i>Trowel icons created by Freepik - Flaticon</i></a>
+</sub>
 
-<font size=1>
-<a href="https://www.flaticon.com/free-icons/trowel" title="trowel icons">Trowel icons created by Freepik - Flaticon</a>
-</font>
+### 🚧 Work In Progress 🚧
+More components coming soon...
 
 ## Example Usage
 
@@ -106,11 +108,12 @@ You can use these tables as a reference to understand the parameters and their t
 
 | Property        | Type                    | Explanation                                                                                                                     |
 |-----------------|-------------------------|---------------------------------------------------------------------------------------------------------------------------------|
-| fields          | ([Field](#field-properties) \| FieldContainer)[] | An array of fields or field containers that define the structure of the form. Field containers allow grouping multiple fields. |
+| fields          | ([Field](#field-properties) \| FieldContainer)[] | An array of fields or field containers that define the structure of the form. Field containers allow grouping multiple fields. Field can be and object or a simple string representing the field name, in which case the value of type is "text" by default. |
 | globalLabels    | LabelType \| undefined  | (Optional) The default label type for all fields. It can be "none", "default", or "placeholder".                              |
 | submit          | [SubmitAction](#submit-action-properties) \| undefined | (Optional) An object representing the submit action properties.                                                               
 
 ### Field Properties
+
 
 | Property        | Type                      | Explanation                                                                                                       |
 |-----------------|---------------------------|-------------------------------------------------------------------------------------------------------------------|
@@ -125,6 +128,8 @@ You can use these tables as a reference to understand the parameters and their t
 | onChange        | (event: Event) => string \| void    | (Optional) A function called when the field's value changes. It can return a string or nothing (void).        |
 | onFocus         | (event: Event) => string \| void    | (Optional) A function called when the field receives focus. It can return a string or nothing (void).          |
 | onBlur          | (event: Event) => string \| void    | (Optional) A function called when the field loses focus. It can return a string or nothing (void).            |
+
+`Field` can be a simple string representing the field name, in which case the value of type is "text" by default.
 
 The `Field` type represents a single form field and its associated properties. You can use these properties to customize the behavior and appearance of each field when creating forms with TrowelJS.
 
