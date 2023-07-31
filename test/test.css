@@ -1,0 +1,6 @@
+@import url('../node_modules/troweljs/static/styles/form.css');
+
+.myform {
+    border: blue solid 1px;
+    width: 500px;
+}
